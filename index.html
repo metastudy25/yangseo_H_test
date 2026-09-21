@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>양서고 영어 내신 대비 완전정복 가이드 | 이든X학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2A4A;
+    --blueprint:#2D4468;
+    --blueprint-deep:#182338;
+    --parchment:#F6F3EA;
+    --paper:#FCFAF4;
+    --gold:#B4872E;
+    --gold-light:#E8D5A8;
+    --slate:#5B6B82;
+    --crimson:#8C3B3B;
+    --rule:#D8D1BF;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--parchment);
+    color:var(--ink);
+    font-family:'Noto Sans KR', sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:800px;
+    margin:0 auto;
+    background:var(--paper);
+    box-shadow:0 0 0 1px var(--rule);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(155deg, var(--blueprint) 0%, var(--blueprint-deep) 100%);
+    color:#EDE9DD;
+    padding:56px 48px 44px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 32px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 32px);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;}
+  .hero-tag{
+    font-size:14px;
+    color:var(--gold-light);
+    font-weight:500;
+    margin:0 0 18px;
+    letter-spacing:0.02em;
+  }
+  .hero h1{
+    font-family:'Noto Serif KR', serif;
+    font-weight:700;
+    font-size:32px;
+    line-height:1.45;
+    margin:0 0 16px;
+    color:#FBF9F2;
+  }
+  .hero p.lead{
+    font-size:15.5px;
+    color:#C9D2DE;
+    max-width:56ch;
+    margin:0;
+  }
+  .hero-meta{
+    display:flex;
+    gap:28px;
+    margin-top:32px;
+    padding-top:24px;
+    border-top:1px solid rgba(232,213,168,0.25);
+    flex-wrap:wrap;
+  }
+  .hero-meta div{font-size:13px;color:#A9B6C6;}
+  .hero-meta strong{display:block;color:#EDE9DD;font-size:14.5px;font-weight:600;margin-bottom:3px;}
+
+  /* ---------- BODY ---------- */
+  .content{padding:8px 48px 12px;}
+  section{padding:40px 0;border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+
+  h2.section-title{
+    font-family:'Noto Serif KR', serif;
+    font-size:23px;
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 6px;
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+  }
+  h2.section-title .mark{
+    display:inline-block;
+    width:10px;height:10px;
+    background:var(--gold);
+    border-radius:1px;
+    transform:rotate(45deg);
+    flex:none;
+  }
+  .section-sub{
+    font-size:14px;
+    color:var(--slate);
+    margin:0 0 28px;
+  }
+
+  /* grade cards */
+  .grade-block{
+    margin-bottom:28px;
+    border-left:3px solid var(--blueprint);
+    padding-left:22px;
+  }
+  .grade-block.grade-2{border-left-color:var(--gold);}
+  .grade-block h3{
+    font-size:17px;
+    font-weight:700;
+    color:var(--blueprint);
+    margin:0 0 4px;
+  }
+  .grade-block.grade-2 h3{color:#8C6A1E;}
+  .grade-block .composition{
+    font-size:13.5px;
+    color:var(--slate);
+    margin:0 0 14px;
+    line-height:1.6;
+  }
+  .grade-block .composition b{color:var(--ink);font-weight:600;}
+  .point-list{margin:0;padding:0;list-style:none;}
+  .point-list li{
+    position:relative;
+    padding-left:20px;
+    margin-bottom:12px;
+    font-size:14.5px;
+    color:#33405A;
+  }
+  .point-list li::before{
+    content:"";
+    position:absolute;
+    left:0;top:9px;
+    width:6px;height:6px;
+    background:var(--blueprint);
+    border-radius:50%;
+  }
+  .grade-block.grade-2 .point-list li::before{background:var(--gold);}
+  .point-list li b{color:var(--ink);font-weight:600;}
+  .point-list .sub{
+    margin-top:8px;
+    margin-left:2px;
+    font-size:13.5px;
+    color:var(--slate);
+  }
+  .point-list .sub div{margin-bottom:4px;}
+
+  /* strategy steps */
+  .steps{counter-reset:step;}
+  .step{
+    display:grid;
+    grid-template-columns:56px 1fr;
+    gap:20px;
+    padding:22px 0;
+    border-top:1px dashed var(--rule);
+  }
+  .step:first-child{border-top:none;padding-top:6px;}
+  .step-num{
+    font-family:'Noto Serif KR', serif;
+    font-size:30px;
+    font-weight:700;
+    color:var(--gold);
+    line-height:1;
+    padding-top:2px;
+  }
+  .step h3{
+    font-size:16.5px;
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .step p, .step ul{
+    font-size:14.5px;
+    color:#33405A;
+    margin:0 0 6px;
+  }
+  .step ul{padding-left:18px;margin-top:8px;}
+  .step ul li{margin-bottom:6px;}
+  .step ul li b{color:var(--crimson);font-weight:600;}
+
+  .time-table{
+    margin-top:14px;
+    border:1px solid var(--rule);
+    border-radius:2px;
+    overflow:hidden;
+  }
+  .time-row{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    border-top:1px solid var(--rule);
+  }
+  .time-row:first-child{border-top:none;}
+  .time-row .tlabel{
+    background:var(--blueprint);
+    color:#EDE9DD;
+    font-size:13px;
+    font-weight:600;
+    padding:12px 14px;
+    display:flex;
+    align-items:center;
+  }
+  .time-row .tdesc{
+    padding:12px 16px;
+    font-size:13.5px;
+    color:#33405A;
+    display:flex;
+    align-items:center;
+  }
+
+  /* summary callout */
+  .callout{
+    background:var(--blueprint-deep);
+    color:#EDE9DD;
+    border-radius:3px;
+    padding:32px 34px;
+    margin-top:10px;
+    position:relative;
+  }
+  .callout::before{
+    content:"";
+    position:absolute;
+    left:0;top:0;bottom:0;
+    width:4px;
+    background:var(--gold);
+  }
+  .callout h3{
+    font-family:'Noto Serif KR', serif;
+    font-size:18px;
+    margin:0 0 12px;
+    color:#F3E8CB;
+  }
+  .callout p{
+    font-size:14.5px;
+    color:#C9D2DE;
+    margin:0 0 10px;
+    line-height:1.85;
+  }
+  .callout p:last-child{margin-bottom:0;}
+  .callout b{color:#F3E8CB;font-weight:600;}
+
+  /* footer */
+  footer{
+    background:var(--ink);
+    color:#AEB8CA;
+    padding:36px 48px;
+    font-size:12.5px;
+    line-height:1.9;
+  }
+  footer .foot-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:16px;
+    padding-bottom:18px;
+    border-bottom:1px solid rgba(174,184,202,0.2);
+    margin-bottom:16px;
+  }
+  footer .brand{
+    font-family:'Noto Serif KR', serif;
+    font-size:16px;
+    font-weight:700;
+    color:#F6F3EA;
+  }
+  footer .brand span{
+    display:block;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:11.5px;
+    font-weight:400;
+    color:#8390A6;
+    margin-top:4px;
+  }
+  footer .contact{text-align:right;color:#8FA1BE;}
+  footer .copyright{color:#6E7A90;}
+
+  @media (max-width:640px){
+    .hero{padding:40px 22px 32px;}
+    .content{padding:4px 22px 8px;}
+    footer{padding:28px 22px;}
+    .hero h1{font-size:25px;}
+    .step{grid-template-columns:40px 1fr;gap:14px;}
+    .step-num{font-size:24px;}
+    footer .foot-top{flex-direction:column;}
+    footer .contact{text-align:left;}
+  }
+
+  @media print{
+    body{background:#fff;}
+    .page{box-shadow:none;}
+    .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .callout{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .time-row .tlabel{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    footer{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    section{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">양서고등학교 영어 내신 대비 자료</p>
+      <h1>2학기 중간고사, 무엇이 나오고<br>어떻게 준비해야 하는가</h1>
+      <p class="lead">학년별 출제 데이터를 근거로 정리한 출제 특징 분석과, 1등급 쟁취를 위한 4단계 실행 전략을 담았습니다. 학생·학부모님께서 시험 전 학습 방향을 잡는 데 참고하시기 바랍니다.</p>
+      <div class="hero-meta">
+        <div><strong>대상</strong>양서고 1·2학년</div>
+        <div><strong>범위</strong>2학기 중간고사 영어</div>
+        <div><strong>자료 성격</strong>출제 분석 · 학습 전략</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <section>
+      <h2 class="section-title"><span class="mark"></span>학년별 출제 특징 분석</h2>
+      <p class="section-sub">동일한 학교라도 학년에 따라 출제 구성과 평가 초점이 다르게 설계됩니다. 아래 두 학년의 차이를 먼저 정확히 이해해야 학습 계획이 흔들리지 않습니다.</p>
+
+      <div class="grade-block grade-1">
+        <h3>1학년 · 공통영어2</h3>
+        <p class="composition"><b>출제 구성 —</b> 공통영어2 교과서(1~3과) + EBS 수능특강 Light + 천일문 구문 + 보카클리어 어휘 + 수업 유인물</p>
+        <ul class="point-list">
+          <li><b>수능 독해 유형의 조기 훈련.</b> EBS 수능특강 Light를 통해 목적, 심경, 함축 의미, 요지·주장, 주제 파악 등 수능 독해의 거시적 핵심 유형을 집중적으로 평가합니다.</li>
+          <li><b>구문·어휘 교재와의 강한 연동.</b> 독해 지문이 천일문의 구문 분석 체계 및 보카클리어의 어휘 데이터와 긴밀하게 연결되어 출제됩니다.</li>
+          <li><b>변형 출제에 대한 대비 필요.</b> 지문 속 핵심 단어가 보카클리어 수준의 유의어로 교체되어 출제되거나, 천일문의 주요 구문이 서술형 영작의 프레임으로 그대로 활용되는 것이 특징입니다.</li>
+        </ul>
+      </div>
+
+      <div class="grade-block grade-2">
+        <h3>2학년 · 영어2</h3>
+        <p class="composition"><b>출제 구성 —</b> 영어2 교과서 + 수능형 부교재 + Topic &amp; Main Idea 지문 + 어휘·문법 특화 프린트 + 공통 어휘 PDF(pp.46~62)</p>
+        <ul class="point-list">
+          <li><b>출제 깊이와 범위의 대폭 확대.</b> 1학년 대비 영역별 출제 깊이가 크게 강화되며, 출제 영역 자체가 다각화되어 시험 범위 전반을 촘촘히 다룹니다.</li>
+          <li><b>부교재 빈칸 완성 및 수능형 변형.</b> 지문 내 논리적 인과관계와 핵심 어휘·구문을 서술형 빈칸으로 완성하게 하거나, 어법·어휘·빈칸·순서·흐름 무관 등 수능형 객관식 변형 문제가 집중 배치됩니다.
+            <div class="sub"><div>· 고난도 특수구문 영작 및 주제문 도출 — 관계사 추가 용법, 도치·강조·생략 등 특수구문, 접속사 조건이 부여된 고난도 서술형 영작과 요약문 완성이 감점의 주요 원인으로 작용합니다.</div></div>
+          </li>
+          <li><b>17페이지 분량 공통 어휘 PDF(pp.46~62).</b> 방대한 단어·숙어 범위가 시험 전반에 걸쳐 직·간접적으로 출제되어, 상위권 만점과 1등급을 가르는 결정적 변수로 작용합니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span class="mark"></span>양서고 영어 내신 1등급 쟁취, 4단계 실행 전략</h2>
+      <p class="section-sub">방대한 분량을 무작정 암기하는 방식으로는 한계가 있습니다. 아래 순서대로 학습을 설계하면 감점 요인을 체계적으로 줄일 수 있습니다.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>지문의 시각화 및 논리 매핑</h3>
+            <p>100개가 넘는 지문을 단순 암기하는 것은 사실상 불가능합니다. 모든 지문을 <b>[주제문 – 연결어 – 근거/예시]</b> 흐름으로 도식화하여 한눈에 파악할 수 있도록 정리합니다.</p>
+            <p>지문을 보자마자 3초 이내에 전체 논리 구조와 핵심 키워드가 스캔되도록 반복 훈련하는 것이 목표입니다.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>서술형 타깃 문장 &#39;선별 백지 영작&#39;</h3>
+            <p>모든 문장을 외우는 대신, 출제 가능성이 높은 문장을 선별하여 백지 영작으로 훈련합니다.</p>
+            <ul>
+              <li><b>1순위</b> — 도치, 강조, 가정법, 관계사 등 특수구문이 포함된 문장</li>
+              <li><b>2순위</b> — 지문의 주제를 관통하는 핵심 주제문 및 반전·결론 문장</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>형태적 완결성 훈련</h3>
+            <p>한국어 해석만 보고 영작하되, &#39;어형 변화 필수&#39;, &#39;특수구문 적용&#39; 등 실제 시험 조건을 스스로 부여하여 연습합니다.</p>
+            <p>관사(a/the), 수 일치, 시제, 태, 철자(Spelling) 등 사소해 보이지만 실제 감점의 가장 큰 원인이 되는 요소를 사전에 차단하는 <b>셀프 교차 채점</b>을 반드시 병행합니다.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>실전 타임 어택 훈련 · 25-20-5 전략</h3>
+            <p>제한시간 50분 동안 40문항 이상을 정확히 해결하기 위한 시간 배분 공식을 몸에 익힙니다.</p>
+            <div class="time-table">
+              <div class="time-row">
+                <div class="tlabel">객관식 · 25분</div>
+                <div class="tdesc">지문당 1분 컷. 모르는 문항은 신속히 건너뛰고 확실한 문제부터 해결합니다.</div>
+              </div>
+              <div class="time-row">
+                <div class="tlabel">서술형 · 20분</div>
+                <div class="tdesc">조건 분석 5분, 정밀 영작 15분으로 배분합니다.</div>
+              </div>
+              <div class="time-row">
+                <div class="tlabel">최종 검토 · 5분</div>
+                <div class="tdesc">마킹 확인 및 서술형 수 일치·시제·관사·철자 오기를 최종 점검합니다.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="callout">
+        <h3>종합 제언</h3>
+        <p>양서고 영어 내신은 <b>&#39;성실함과 정밀함의 극한&#39;</b>을 요구하는 평가 시스템입니다.</p>
+        <p>방대한 지문 분량을 극복하기 위해 평소에는 <b>&#39;지문 구조화(Logic Map)&#39;</b>로 장기 기억을 형성하고, 시험 직전에는 <b>&#39;조건부 백지 영작&#39;</b>과 <b>&#39;유의어 확장 학습&#39;</b>을 통해 감점 요인을 철저히 제거해야만 안정적인 1등급을 쟁취할 수 있습니다.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="foot-top">
+      <div class="brand">이든X학원<span>이든관리형학습센터 · 학습관리 · 영어내신 · 수능지도</span></div>
+      <div class="contact">하남시 미사강변대로 80 그린프라자 7층<br>문의 010-8442-2817</div>
+    </div>
+    <div class="copyright">본 자료는 이든X학원이 자체 분석·제작한 콘텐츠로, 무단 전재 및 재배포를 금합니다.<br>Copyright ⓒ 2026 이든X학원(Eden X Academy). All rights reserved.</div>
+  </footer>
+
+</div>
+</body>
+</html>
